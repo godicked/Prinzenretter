@@ -1,0 +1,48 @@
+# depslib dependency file v1.0
+1523480033 source:/home/david/Prinzenretter/Prinzenretterin.cpp
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL.h>
+	<SDL_image.h>
+	<time.h>
+	<iostream>
+	"Spielfeld.h"
+	"Spielfigur.h"
+	"Raetsel.h"
+	"Schluessel.h"
+
+1523478063 /home/david/Prinzenretter/Spielfeld.h
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<time.h>
+
+1523479572 /home/david/Prinzenretter/Spielfigur.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_image.h>
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<time.h>
+	"Spielfeld.h"
+
+1523480458 /home/david/Prinzenretter/Raetsel.h
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<time.h>
+	"Spielfeld.h"
+
+1523474202 /home/david/Prinzenretter/Schluessel.h
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	<SDL.h>
+	<SDL_image.h>
+	<iostream>
+	<time.h>
+	"Spielfeld.h"
+
