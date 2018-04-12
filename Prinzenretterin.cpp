@@ -36,8 +36,8 @@ int main(int a, char **b){
     SDL_Surface *raetsel4 = IMG_Load("raetsel4.png");
     SDL_Surface *raetsel[4] = {raetsel1, raetsel2, raetsel3, raetsel4};
 
-    Spielfeld field("tiles.png");
-    Spielfigur S1 (7, 6, 1, "tiles.png", &field);
+    Spielfeld field("tiles2.png");
+    Spielfigur S1 (7, 6, 1, "tiles2.png", &field);
 
     Schluessel K1 (1, 1, 1, "tiles.png", &field);
     Schluessel K2 (24, 1, 2, "tiles.png", &field);
@@ -54,7 +54,7 @@ int main(int a, char **b){
     int Richtung = 4;
     srand(time(NULL));
 
-    int Level = 1;
+    int Level = 5;
     int Nummer = 0;
 
     int m, n;
@@ -131,25 +131,25 @@ int main(int a, char **b){
             S1.zeichnen(Richtung, surf);
 
             for (int i=0; i < 4; i++) {
-                m = S1.figur_x - K[i].schluessel_x;
-                n = S1.figur_y - K[i].schluessel_y;
+                m = S1.figur_x - K[i].figur_x;
+                n = S1.figur_y - K[i].figur_y;
 
-                if (K[i].gefangen == false && key_counter % 10 == 0){
+                if (K[i].gefangen == false){
                     K[i].fliehen(S1.figur_x, S1.figur_y, i, anderex, anderey);
 
-                    if ((m*m == 0) && (n*n == 0)){
+                    if ((m == 0) && (n == 0)){
                         K[i].fangen(Nummer);
                         Nummer++;
                     }
                 }
-            }
 
-            key_counter++;
+                if(!K[i].gefangen) K[i].update();
+            }
 
             for (int i=0; i < 4; i++) {
                 K[i].zeichnen(surf);
-                anderex[i] = K[i].schluessel_x;
-                anderey[i] = K[i].schluessel_y;
+                anderex[i] = K[i].figur_x;
+                anderey[i] = K[i].figur_y;
             }
 
             if (Nummer == 4){

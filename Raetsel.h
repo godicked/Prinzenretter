@@ -4,7 +4,6 @@
 #ifdef __unix__
 #include<SDL/SDL.h>
 #include<SDL/SDL_image.h>
-
 #else
 #include <SDL.h>
 #include <SDL_image.h>
