@@ -54,7 +54,7 @@ int main(int a, char **b){
     int Richtung = 4;
     srand(time(NULL));
 
-    int Level = 5;
+    int Level = 1;
     int Nummer = 0;
 
     int m, n;
@@ -70,9 +70,23 @@ int main(int a, char **b){
       while ( SDL_PollEvent( &e ) != 0 ) {
         if( e.type == SDL_KEYDOWN ) {
             int taste = e.key.keysym.sym;
-            if (taste == SDLK_SPACE) {
+            if (taste == SDLK_SPACE && Level != 3) {
                     ende = true;
-                }
+            }
+            else if(taste == SDLK_SPACE)
+            {
+                Level = 1;
+                S1 = Spielfigur(7, 6, 1, "tiles2.png", &field);
+                R1 = Raetsel(1, 1, 4, "tiles.png", "raetsel1.png", &field);
+                R2 = Raetsel(19, 6, 1, "tiles.png", "raetsel2.png", &field);
+                R3 = Raetsel(20, 18, 3, "tiles.png", "raetsel3.png", &field);
+                R4 = Raetsel(4, 20, 2, "tiles.png", "raetsel4.png", &field);
+                R[0] = R1;
+                R[1] = R2;
+                R[2] = R3;
+                R[3] = R4;
+
+            }
         }}
 
         if (Level == 1) {

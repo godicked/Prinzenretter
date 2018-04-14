@@ -39,6 +39,7 @@
 			<Add option="-lSDL2main -lSDL2 -lSDL2_image" />
 			<Add directory="../C++/mingw_dev_libs/lib" />
 		</Linker>
+		<Unit filename="Movable.h" />
 		<Unit filename="Prinzenretterin.cpp" />
 		<Unit filename="Raetsel.h" />
 		<Unit filename="Schluessel.h" />
